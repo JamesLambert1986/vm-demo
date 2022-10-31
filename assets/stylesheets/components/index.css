@@ -1,0 +1,60 @@
+.index {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
+  font-family: var(--font-heading) ;
+  font-weight: 200;
+}
+
+@media (min-width: 62em) {
+  .index {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+.index .col {
+  border-right: 1px solid currentColor;
+  border-color: var(--colour-border) ;
+  margin-bottom: 1rem;
+  min-width: calc(100%/7);
+  max-width: calc(100%/7);
+}
+
+.index .col:nth-child(7n), .index .col:last-child {
+  border-right: none;
+}
+
+@media (min-width: 36em) {
+  .index .col {
+    min-width: calc(100%/13);
+    max-width: calc(100%/13);
+  }
+  .index .col:nth-child(7n) {
+    border-right: 1px solid currentColor;
+    border-color: var(--colour-border) ;
+  }
+  .index .col:nth-child(13) {
+    border-right: none;
+  }
+}
+
+@media (min-width: 62em) {
+  .index .col {
+    min-width: calc(100%/26);
+    max-width: calc(100%/26);
+  }
+  .index .col:nth-child(13) {
+    border-right: 1px solid currentColor;
+    border-color: var(--colour-border) ;
+  }
+}
+
+.index a {
+  font-weight: 700;
+  display: block;
+}
+
+/*# sourceMappingURL=maps/index.css.map */

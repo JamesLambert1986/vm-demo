@@ -1,0 +1,115 @@
+:root {
+  --colour-primary: #61126b;
+  --colour-heading: #61126b;
+  --font-heading: Gotham A,Gotham B, Arial, sans-serif;
+  --font-body: Gotham A,Gotham B, Arial, sans-serif;
+}
+
+html {
+  font-weight: 400;
+}
+
+p a,
+p a:focus,
+p a:hover,
+p a:active, p.selected,
+small a,
+small a:focus,
+small a:hover,
+small a:active,
+small.selected,
+ul a,
+ul a:focus,
+ul a:hover,
+ul a:active,
+ul.selected,
+ol a,
+ol a:focus,
+ol a:hover,
+ol a:active,
+ol.selected,
+address a,
+address a:focus,
+address a:hover,
+address a:active,
+address.selected,
+dt a,
+dt a:focus,
+dt a:hover,
+dt a:active,
+dt.selected,
+dd a,
+dd a:focus,
+dd a:hover,
+dd a:active,
+dd.selected {
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: 200;
+  color: #e1163c;
+  background: -webkit-linear-gradient(left, #e1163c, #a11453);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.brand .svg__wrapper {
+  width: 12.5rem;
+}
+
+.svg__wrapper:not(.svg__wrapper--fill) svg {
+  stroke: #e1163c;
+  stroke-width: 1.5px;
+}
+
+.btn {
+  border-radius: 0.3125rem;
+  font-weight: 400;
+}
+
+.btn:hover {
+  border-color: #e1163c;
+}
+
+.btn .svg__wrapper {
+  border: transparent;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #e1163c 4.49%, #ba154a 95.72%) !important;
+  border-color: #e1163c;
+  background-repeat: no-repeat !important;
+  background-position: 16px 17px;
+}
+
+.list-links .svg__wrapper--fill svg {
+  fill: #e1163c;
+  height: 0.8em;
+  margin-bottom: -0.1em;
+}
+
+/* IE11 Fix */
+body.ie {
+  font-family: Gotham A,Gotham B, Arial, sans-serif;
+}
+
+body.ie h1,
+body.ie h2,
+body.ie h3 {
+  color: #61126b;
+}
+
+/*# sourceMappingURL=maps/vaa.css.map */

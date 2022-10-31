@@ -1,0 +1,314 @@
+.tabs ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 -2rem 0 -2rem;
+  justify-content: center;
+  max-width: none;
+}
+
+.tabs ul .tab {
+  display: block;
+  padding: 0;
+}
+
+.tabs ul .tab:before {
+  content: '';
+}
+
+.tabs ul .tab__target {
+  display: block;
+  text-align: left;
+  padding: 1.25rem 1rem 1.25rem 1rem;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  border-color: var(--colour-border) ;
+}
+
+.tabs ul .tab__target:before {
+  height: 100%;
+  width: 0.25rem;
+  background: transparent;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  transform: none;
+}
+
+.tabs ul .tab__target:active, .tabs ul .tab__target:hover, .tabs ul .tab__target:focus {
+  text-decoration: none;
+}
+
+.tabs ul .tab__target:hover, .tabs ul .tab__target:focus {
+  background: var(--colour-light) ;
+  color: var(--colour-body) ;
+}
+
+.tabs ul .tab__target:active {
+  background: var(--colour-light) ;
+  color: var(--colour-active) ;
+}
+
+.tabs ul .tab__target:hover:before, .tabs ul .tab__target:focus:before, .tabs ul .tab__target:active:before,
+.js-enabled .tabs ul .tab__target:not(.collapsed):before {
+  background: currentColor;
+}
+
+.js-enabled .tabs ul a[role="tab"]:not(.collapsed) {
+  color: var(--colour-primary) ;
+  pointer-events: none;
+}
+
+@media (min-width: 36em) {
+  .tabs ul {
+    display: flex;
+    flex-wrap: nowrap;
+    border-bottom: 1px solid currentColor;
+    border-color: var(--colour-border) ;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-box-pack: center !important;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+  }
+  .tabs ul .tab {
+    border: 0;
+    width: auto;
+    min-width: calc(100% / 6);
+    max-width: 20rem;
+    flex: 0 1 20rem;
+  }
+  .tabs ul .tab__target {
+    border: none;
+    text-align: center;
+    justify-content: center;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 100%;
+    padding: 2rem 0.5rem 1.5rem 0.5rem;
+  }
+  .tabs ul .tab__target:before {
+    width: 100%;
+    height: 1px;
+    top: auto;
+    bottom: 0;
+    margin-bottom: -1px;
+  }
+  .tabs ul .tab__target:hover, .tabs ul .tab__target:focus {
+    background: transparent;
+  }
+  .tabs ul .tab__target:active:before,
+  .js-enabled .tabs ul .tab__target:not(.collapsed):before {
+    height: 2px;
+  }
+}
+
+.tabpanel {
+  background: var(--bg-colour);
+  height: auto !important;
+  display: none !important;
+  padding-top: 1.5rem;
+  position: relative;
+}
+
+.tabpanel:focus {
+  outline: none;
+}
+
+.tabpanel .img--banner {
+  margin-top: -1.5rem;
+}
+
+.tabpanel.show {
+  display: block !important;
+  overflow: visible;
+}
+
+body:not(.js-enabled) .tabpanel:target {
+  display: block !important;
+}
+
+.tabs--content {
+  display: none;
+}
+
+.tabs--content ~ .tabpanel {
+  padding-top: 3rem;
+  margin-top: -3rem;
+}
+
+.tabs__container--carousel {
+  padding: 0;
+  margin-bottom: 0 !important;
+}
+
+.tabs--carousel {
+  position: absolute;
+  width: 50%;
+  left: 25%;
+  z-index: 2;
+  padding: 1.5rem 0;
+}
+
+@media (min-width: 62em) {
+  .tabs--carousel {
+    width: 50%;
+    left: 50%;
+    top: 4rem;
+    padding: 0 0 0 7.5rem;
+  }
+}
+
+.tabs--carousel ul {
+  display: block;
+  border: none;
+  text-align: center;
+}
+
+@media (min-width: 62em) {
+  .tabs--carousel ul {
+    text-align: left;
+  }
+}
+
+.tabs--carousel ul .tab {
+  text-align: center;
+  display: inline-block;
+  min-width: auto;
+  max-width: auto;
+  margin: 0 1rem 0 0;
+}
+
+.tabs--carousel ul .tab .tab__target {
+  display: block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  border: solid 1px #6D7173;
+  padding: 0;
+}
+
+.tabs--carousel ul .tab .tab__target:not(.collapsed) {
+  border-color: var(--colour-primary) ;
+  background: var(--colour-primary) ;
+}
+
+.tabs--carousel ul .tab .tab__target:not(.collapsed):before {
+  display: none;
+}
+
+.tabs--carousel ul .tab .tab__target:hover {
+  border-color: var(--colour-primary) ;
+}
+
+.tabs--carousel ul .tab .tab__target:hover:before {
+  display: none;
+}
+
+.carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  min-height: 25rem;
+}
+
+@media (min-width: 62em) {
+  .carousel-wrapper {
+    min-height: 40rem;
+    max-height: 40rem;
+  }
+}
+
+.carousel-wrapper .tabpanel {
+  padding: 0;
+  background: transparent;
+  transition: none !important;
+  -webkit-transition-duration: 1.5s !important;
+  transition-duration: 1.5s !important;
+}
+
+.carousel-wrapper .tabpanel > .container {
+  animation-duration: 1.25s !important;
+}
+
+.carousel-wrapper .tabpanel.collapsing {
+  display: block !important;
+}
+
+.carousel-wrapper .tabpanel.opening {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.carousel-wrapper .tabpanel.closing ~ .tabpanel.opening > .container {
+  animation: var(--animation-slide-left) ;
+}
+
+.carousel-wrapper .tabpanel.closing > .container {
+  animation: var(--animation-slide-right-out) ;
+}
+
+.carousel-wrapper .tabpanel.opening > .container {
+  animation: var(--animation-slide-right) ;
+}
+
+.carousel-wrapper .tabpanel.opening > .container > .row > .col-12 + .col-12 {
+  opacity: 0;
+  animation: 1.25s ease-out fade-in 0.25s forwards;
+}
+
+.carousel-wrapper .tabpanel.opening ~ .tabpanel.closing > .container {
+  animation: var(--animation-slide-left-out) ;
+}
+
+.carousel-wrapper .tabpanel.closing > .btn,
+.carousel-wrapper .tabpanel.opening > .btn {
+  pointer-events: none;
+}
+
+.carousel-wrapper .tabpanel.closing > .btn {
+  display: none;
+}
+
+.tabpanel .btn-icon-only {
+  top: 0;
+  z-index: 2;
+  margin-bottom: 0;
+  position: absolute;
+}
+
+.tabpanel .btn-icon-only.tab-left {
+  left: 0;
+}
+
+.tabpanel .btn-icon-only.tab-right {
+  right: 0;
+  left: auto;
+}
+
+@media (min-width: 62em) {
+  .tabpanel .btn-icon-only {
+    top: 50%;
+    margin-top: -2.25rem;
+  }
+}
+
+.tabpanel .container--split [class^="col-"]:last-of-type > *:first-child {
+  padding-top: 2rem;
+}
+
+body:not(.js-enabled) .carousel-wrapper .tabpanel:last-child {
+  display: block !important;
+}
+
+body:not(.js-enabled) .carousel-wrapper .tabpanel:target ~ .tabpanel:last-child {
+  display: none !important;
+}
+
+/*# sourceMappingURL=maps/tabs.css.map */

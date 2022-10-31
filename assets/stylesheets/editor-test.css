@@ -1,0 +1,580 @@
+body {
+  padding: 10px;
+  color: #424242;
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: red;
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h1.hero,
+h2.hero,
+h3.hero,
+h4.hero,
+h5.hero,
+h6.hero {
+  color: black;
+}
+
+h1.hero strong,
+h2.hero strong,
+h3.hero strong,
+h4.hero strong,
+h5.hero strong,
+h6.hero strong {
+  color: red;
+}
+
+h1.display-1,
+h2.display-1,
+h3.display-1,
+h4.display-1,
+h5.display-1,
+h6.display-1 {
+  font-size: 3.4rem;
+}
+
+h1.display-2,
+h2.display-2,
+h3.display-2,
+h4.display-2,
+h5.display-2,
+h6.display-2 {
+  font-size: 3.2rem;
+}
+
+h1.display-3,
+h2.display-3,
+h3.display-3,
+h4.display-3,
+h5.display-3,
+h6.display-3 {
+  font-size: 3rem;
+}
+
+h1.display-4,
+h2.display-4,
+h3.display-4,
+h4.display-4,
+h5.display-4,
+h6.display-4 {
+  font-size: 2.8rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+p.strapline {
+  color: black;
+  font-size: 1.5rem;
+}
+
+p.lead {
+  font-weight: bold;
+}
+
+p.small, p.caveat {
+  font-size: 0.8rem;
+}
+
+p.risk-statement {
+  color: purple;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+}
+
+hr {
+  margin: 0 0 1rem 0;
+  border: 0;
+  border-top: 3px solid black;
+  padding-bottom: 1rem;
+}
+
+hr.hr--thick {
+  border-top: 6px solid black;
+}
+
+hr.hr--thin {
+  border-top: 1px solid black;
+}
+
+hr.hr--header {
+  border-top: 3px solid red;
+  width: 50px;
+}
+
+hr.hr--body {
+  border-top: 3px solid black;
+  width: 50px;
+}
+
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ol li,
+ul li {
+  margin-bottom: 0.25rem;
+}
+
+ol.tick-list,
+ul.tick-list {
+  list-style: none;
+}
+
+ol.tick-list > li:before,
+ul.tick-list > li:before {
+  content: "\2713\00a0\00a0";
+  color: green;
+}
+
+ol.tick-list--connected > li,
+ul.tick-list--connected > li {
+  position: relative;
+}
+
+ol.tick-list--connected > li:not(:last-child):after,
+ul.tick-list--connected > li:not(:last-child):after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 1rem;
+  left: 0.25rem;
+  height: 0.6rem;
+  margin-top: 1px;
+  width: 2px;
+  background: green;
+}
+
+ol.list-centered,
+ul.list-centered {
+  text-align: center;
+  max-width: none;
+}
+
+ol.list-divided li:first-child,
+ul.list-divided li:first-child {
+  border-top: 1px solid grey;
+  padding-top: 0.5rem;
+}
+
+ol.list-divided li,
+ul.list-divided li {
+  border-bottom: 1px solid grey;
+  padding-bottom: 0.5rem;
+}
+
+ol.decorative {
+  color: green;
+}
+
+/* Removed as they have been taken care of with shortcodes
+a {
+  &.btn {
+    border: 1px solid grey;
+    padding: 0.5rem;
+    display: inline-block;
+
+    &:after {
+      content: " Needs an extra class adding!";
+      color: red;
+    }
+  }
+  &.btn.btn-primary {
+    border: 1px solid red;
+    background: red;
+    color: white;
+
+    padding: 1rem;
+    &:after {
+      content: "";
+    }
+  }
+  &.btn.btn-secondary {
+    border: 1px solid red;
+
+    padding: 0.75rem;
+    &:after {
+      content: "";
+    }
+  }
+  &.btn.btn-tertiary {
+    border: 1px solid purple;
+
+    &:after {
+      content: "";
+    }
+  }
+  &.btn.btn-link {
+    border: none;
+    
+    &:after {
+      content: " >";
+      color: inherit;
+    }
+  }
+}
+*/
+table {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+table.table-striped tbody tr:nth-of-type(even) {
+  background: lightgrey;
+}
+
+table.table-hover tbody tr.hover {
+  background: lightgrey;
+}
+
+table thead {
+  background: purple;
+  color: white;
+}
+
+table th {
+  font-weight: bold;
+}
+
+table th,
+table td {
+  padding: 0.25rem;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  /*
+      Removed for now
+      &.m-0 { margin: $length !important; }
+      &.mt-0,
+      &.my-0 {
+        margin-top: $length !important;
+      }
+      &.mr-0,
+      &.mx-0 {
+        margin-right: $length !important;
+      }
+      &.mb-0,
+      &.my-0 {
+        margin-bottom: $length !important;
+      }
+      &.ml-0,
+      &.mx-0 {
+        margin-left: $length !important;
+      }
+  */
+  /*
+      Removed for now
+      &.m-1 { margin: $length !important; }
+      &.mt-1,
+      &.my-1 {
+        margin-top: $length !important;
+      }
+      &.mr-1,
+      &.mx-1 {
+        margin-right: $length !important;
+      }
+      &.mb-1,
+      &.my-1 {
+        margin-bottom: $length !important;
+      }
+      &.ml-1,
+      &.mx-1 {
+        margin-left: $length !important;
+      }
+  */
+  /*
+      Removed for now
+      &.m-2 { margin: $length !important; }
+      &.mt-2,
+      &.my-2 {
+        margin-top: $length !important;
+      }
+      &.mr-2,
+      &.mx-2 {
+        margin-right: $length !important;
+      }
+      &.mb-2,
+      &.my-2 {
+        margin-bottom: $length !important;
+      }
+      &.ml-2,
+      &.mx-2 {
+        margin-left: $length !important;
+      }
+  */
+  /*
+      Removed for now
+      &.m-3 { margin: $length !important; }
+      &.mt-3,
+      &.my-3 {
+        margin-top: $length !important;
+      }
+      &.mr-3,
+      &.mx-3 {
+        margin-right: $length !important;
+      }
+      &.mb-3,
+      &.my-3 {
+        margin-bottom: $length !important;
+      }
+      &.ml-3,
+      &.mx-3 {
+        margin-left: $length !important;
+      }
+  */
+  /*
+      Removed for now
+      &.m-4 { margin: $length !important; }
+      &.mt-4,
+      &.my-4 {
+        margin-top: $length !important;
+      }
+      &.mr-4,
+      &.mx-4 {
+        margin-right: $length !important;
+      }
+      &.mb-4,
+      &.my-4 {
+        margin-bottom: $length !important;
+      }
+      &.ml-4,
+      &.mx-4 {
+        margin-left: $length !important;
+      }
+  */
+  /*
+      Removed for now
+      &.m-5 { margin: $length !important; }
+      &.mt-5,
+      &.my-5 {
+        margin-top: $length !important;
+      }
+      &.mr-5,
+      &.mx-5 {
+        margin-right: $length !important;
+      }
+      &.mb-5,
+      &.my-5 {
+        margin-bottom: $length !important;
+      }
+      &.ml-5,
+      &.mx-5 {
+        margin-left: $length !important;
+      }
+  */
+  /*
+      Removed for now
+      &.p-0 { padding: $length !important; }
+      &.pt-0,
+      &.py-0 {
+        padding-top: $length !important;
+      }
+      &.pr-0,
+      &.px-0 {
+        padding-right: $length !important;
+      }
+      &.pb-0,
+      &.py-0 {
+        padding-bottom: $length !important;
+      }
+      &.pl-0,
+      &.px-0 {
+        padding-left: $length !important;
+      }
+  */
+  /*
+      Removed for now
+      &.p-1 { padding: $length !important; }
+      &.pt-1,
+      &.py-1 {
+        padding-top: $length !important;
+      }
+      &.pr-1,
+      &.px-1 {
+        padding-right: $length !important;
+      }
+      &.pb-1,
+      &.py-1 {
+        padding-bottom: $length !important;
+      }
+      &.pl-1,
+      &.px-1 {
+        padding-left: $length !important;
+      }
+  */
+  /*
+      Removed for now
+      &.p-2 { padding: $length !important; }
+      &.pt-2,
+      &.py-2 {
+        padding-top: $length !important;
+      }
+      &.pr-2,
+      &.px-2 {
+        padding-right: $length !important;
+      }
+      &.pb-2,
+      &.py-2 {
+        padding-bottom: $length !important;
+      }
+      &.pl-2,
+      &.px-2 {
+        padding-left: $length !important;
+      }
+  */
+  /*
+      Removed for now
+      &.p-3 { padding: $length !important; }
+      &.pt-3,
+      &.py-3 {
+        padding-top: $length !important;
+      }
+      &.pr-3,
+      &.px-3 {
+        padding-right: $length !important;
+      }
+      &.pb-3,
+      &.py-3 {
+        padding-bottom: $length !important;
+      }
+      &.pl-3,
+      &.px-3 {
+        padding-left: $length !important;
+      }
+  */
+  /*
+      Removed for now
+      &.p-4 { padding: $length !important; }
+      &.pt-4,
+      &.py-4 {
+        padding-top: $length !important;
+      }
+      &.pr-4,
+      &.px-4 {
+        padding-right: $length !important;
+      }
+      &.pb-4,
+      &.py-4 {
+        padding-bottom: $length !important;
+      }
+      &.pl-4,
+      &.px-4 {
+        padding-left: $length !important;
+      }
+  */
+  /*
+      Removed for now
+      &.p-5 { padding: $length !important; }
+      &.pt-5,
+      &.py-5 {
+        padding-top: $length !important;
+      }
+      &.pr-5,
+      &.px-5 {
+        padding-right: $length !important;
+      }
+      &.pb-5,
+      &.py-5 {
+        padding-bottom: $length !important;
+      }
+      &.pl-5,
+      &.px-5 {
+        padding-left: $length !important;
+      }
+  */
+}
+
+p.text-center,
+h1.text-center,
+h2.text-center,
+h3.text-center,
+h4.text-center,
+h5.text-center,
+h6.text-center,
+strong.text-center {
+  text-align: center;
+}
+
+p.text-lowercase,
+h1.text-lowercase,
+h2.text-lowercase,
+h3.text-lowercase,
+h4.text-lowercase,
+h5.text-lowercase,
+h6.text-lowercase,
+strong.text-lowercase {
+  text-transform: lowercase !important;
+}
+
+p.text-uppercase,
+h1.text-uppercase,
+h2.text-uppercase,
+h3.text-uppercase,
+h4.text-uppercase,
+h5.text-uppercase,
+h6.text-uppercase,
+strong.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+p.text-capitalize,
+h1.text-capitalize,
+h2.text-capitalize,
+h3.text-capitalize,
+h4.text-capitalize,
+h5.text-capitalize,
+h6.text-capitalize,
+strong.text-capitalize {
+  text-transform: capitalize !important;
+}
+
+p.text-nowrap,
+h1.text-nowrap,
+h2.text-nowrap,
+h3.text-nowrap,
+h4.text-nowrap,
+h5.text-nowrap,
+h6.text-nowrap,
+strong.text-nowrap {
+  white-space: nowrap !important;
+}
+
+/*# sourceMappingURL=maps/editor.css.map */

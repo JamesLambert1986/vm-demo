@@ -1,0 +1,98 @@
+.accordion {
+  margin-bottom: 4rem;
+  border-bottom: 1px solid;
+  border-bottom-color: var(--colour-border) ;
+  width: 100%;
+  max-width: 50rem;
+  text-align: left;
+}
+
+.accordion .collapse,
+.accordion .collapsing {
+  padding: 0;
+}
+
+.accordion--small {
+  max-width: 50rem;
+}
+
+.accordion__tab {
+  border-top: 1px solid currentColor;
+  border-top-color: var(--colour-border) ;
+  display: block !important;
+}
+
+.accordion .item + .h2 {
+  border-top: 2px solid currentColor;
+  border-top-color: var(--colour-border) ;
+  padding-top: 3rem !important;
+}
+
+.accordion .item > .collapse,
+.accordion .item > .collapsing {
+  padding-right: 3rem !important;
+  font-size: 1rem;
+  line-height: 0.875rem;
+  color: var(--colour-body) ;
+}
+
+.accordion__title {
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  display: block;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  text-decoration: none;
+  position: relative;
+  padding-right: 3rem;
+  font-weight: bold;
+  font-family: var(--font-heading) ;
+  position: relative;
+}
+
+.accordion__title:hover, .accordion__title.hover, .accordion__title:not(.collapsed) {
+  color: var(--colour-primary) ;
+}
+
+.accordion__title:after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1rem);
+  left: auto;
+  right: 0.5rem;
+  height: 2rem;
+  width: 2rem;
+  transition: transform 0.25s ease-out;
+  mask-image: var(--icon-plus);
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  mask-position: 0 0;
+  -webkit-mask-image: var(--icon-plus);
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0 0;
+  background-color: currentColor;
+}
+
+.accordion__title:not(.collapsed):after {
+  transform: rotate(45deg);
+}
+
+.accordion__title:after {
+  top: 1.25rem;
+}
+
+.accordion__title:after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1rem);
+  left: auto;
+  right: 0.5rem;
+  height: 2rem;
+  width: 2rem;
+  transition: transform 0.25s ease-out;
+  background-color: var(--colour-primary);
+}
+
+/*# sourceMappingURL=maps/accordion.css.map */

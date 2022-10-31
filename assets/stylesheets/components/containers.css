@@ -1,0 +1,461 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3rem 2rem 0 2rem;
+}
+
+body:not([data-no-animate]):not(.no-animate) .container:not(.inview) {
+  content-visibility: auto;
+  /* this is the thing that delays painting */
+  contain-intrinsic-size: 1px 500px;
+  /* this is the guess at the height of the content, and also saying width doesn't matter */
+}
+
+.container .container {
+  content-visiblity: unset !important;
+  /* We only want to delay the painting of top level containers */
+}
+
+@media (min-width: 36em) {
+  .container {
+    padding: 4rem 3rem 1rem 3rem;
+    max-width: 90rem;
+  }
+}
+
+@media (min-width: 62em) {
+  .container {
+    padding: 5rem 7.5rem 2rem 7.5rem;
+  }
+}
+
+.container:before {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.container:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.container .container:not(.container--expand) {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.container .container--expand {
+  margin-left: -2rem;
+  margin-right: -2rem;
+  width: auto;
+}
+
+@media (min-width: 36em) {
+  .container .container--expand {
+    margin-left: -3rem;
+    margin-right: -3rem;
+  }
+}
+
+@media (min-width: 62em) {
+  .container .container--expand {
+    margin-left: -7.5rem;
+    margin-right: -7.5rem;
+  }
+}
+
+.container-sm, .container-md {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+@media (min-width: 62em) {
+  .container-md {
+    padding: 5rem 7.5rem 2rem 7.5rem;
+    max-width: 90rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .container-md .container:not(.container--expand) {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+}
+
+.container--split {
+  padding: 0 !important;
+}
+
+.container--split > .row {
+  margin: 0 !important;
+}
+
+.container--split > .row > [class*="col"] {
+  min-width: 100% !important;
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 3rem 2rem 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.container--split > .row > [class*="col"]:not(.pattern--connect-top):not(.pattern--bottom) .pattern__inner svg {
+  top: 10rem;
+}
+
+@media (min-width: 36em) {
+  .container--split > .row > [class*="col"]:not(.pattern--connect-top):not(.pattern--bottom) .pattern__inner svg {
+    top: 15rem;
+  }
+}
+
+@media (min-width: 62em) {
+  .container--split > .row > [class*="col"]:not(.pattern--connect-top):not(.pattern--bottom) .pattern__inner svg {
+    top: 20rem;
+  }
+}
+
+.container--split > .row > [class*="col"].contains-img {
+  min-height: 13.125rem;
+}
+
+@media (min-width: 36em) {
+  .container--split > .row > [class*="col"].contains-img {
+    min-height: 27rem;
+  }
+}
+
+@media (min-width: 36em) {
+  .container--split > .row > [class*="col"] {
+    padding: 4rem 3rem 1rem 3rem;
+  }
+}
+
+@media (min-width: 62em) {
+  .container--split > .row > [class*="col"] {
+    min-width: 50% !important;
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 5rem 7.5rem 2rem 7.5rem;
+    min-height: 40rem;
+  }
+  .container--split > .row > [class*="col"]:nth-child(odd) {
+    padding-right: 6.875rem;
+  }
+  .container--split > .row > [class*="col"]:nth-child(even) {
+    padding-left: 6.875rem;
+  }
+}
+
+.container--split > .row > [class*="col"].contains-logo {
+  padding: 1rem;
+}
+
+.container--split > .row > [class*="col"].contains-logo > img:not(:first-child) {
+  transform: scale(0.5);
+  transform-origin: top left;
+}
+
+@media (min-width: 36em) {
+  .container--split > .row > [class*="col"].contains-logo {
+    padding: 2rem;
+  }
+  .container--split > .row > [class*="col"].contains-logo > img:not(:first-child) {
+    transform: none;
+  }
+}
+
+.container--split > .row > [class*="col"] picture {
+  position: static;
+}
+
+.container--split > .row > [class*="col"] > img:first-child,
+.container--split > .row > [class*="col"] > picture:first-child img,
+.container--split > .row > [class*="col"] > .pattern__inner:first-child + img,
+.container--split > .row > [class*="col"] > .pattern__inner:first-child + picture img {
+  max-width: none;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  margin: 0;
+}
+
+.container--split > .row > [class*="col"].img--square {
+  min-height: 20rem;
+}
+
+.container--split > .row > [class*="col"].img--square img {
+  object-fit: contain !important;
+  object-position: 50% 0%;
+}
+
+@media (min-width: 36em) {
+  .container--split > .row > [class*="col"].img--square {
+    min-height: 30rem;
+  }
+}
+
+@media (min-width: 62em) {
+  .container--split > .row > [class*="col"].img--square {
+    padding: 0 !important;
+  }
+}
+
+.container--split > .row > [class*="col"].img--position-bottom img {
+  object-position: 50% 100% !important;
+}
+
+@media (min-width: 62em) {
+  .container--split > .row > [class*="col"].img--overlap-left img {
+    transform: translate(-100%, -50%) !important;
+  }
+}
+
+.container--split > .row > [class*="col"] > .youtube-embed:first-child,
+.container--split > .row > [class*="col"].youtube-embed__overlay > .youtube-embed {
+  max-width: none;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  margin: 0;
+}
+
+.container--split > .row > [class*="col"] > .youtube-embed:first-child .youtube-embed__inner,
+.container--split > .row > [class*="col"].youtube-embed__overlay > .youtube-embed .youtube-embed__inner {
+  padding-top: 0;
+  height: 100%;
+}
+
+.container--split > .row > [class*="col"] > .youtube-embed:first-child img,
+.container--split > .row > [class*="col"].youtube-embed__overlay > .youtube-embed img {
+  height: 100%;
+}
+
+.container--split > .row > [class*="col"].youtube-embed__overlay > .youtube-embed {
+  z-index: 1;
+}
+
+.container--split > .row > [class*="col"].youtube-embed__overlay > .youtube-embed img {
+  display: none;
+}
+
+.container--split-landscape > .row > [class*="col"],
+.container--split-short > .row > [class*="col"] {
+  min-height: 0;
+}
+
+@media (min-width: 62em) {
+  .container--split-landscape > .row.contains-img,
+  .container--split-short > .row.contains-img {
+    min-height: 30rem;
+  }
+}
+
+@media (min-width: 62em) {
+  .container--split-inline {
+    padding: 5rem 7.5rem 2rem 7.5rem !important;
+  }
+  .container--split-inline .col {
+    padding: 4rem 3.5rem 1.75rem 3.5rem !important;
+  }
+}
+
+.container--split-grid > .row > .col:first-child {
+  min-height: 20rem;
+}
+
+@media (min-width: 36em) {
+  .container--split-grid > .row > .col:first-child {
+    min-height: 25rem;
+  }
+}
+
+@media (min-width: 62em) {
+  .container--split-grid > .row > .col:first-child {
+    min-height: 30rem;
+  }
+}
+
+.container--split-grid > .row > .col:nth-child(1) {
+  max-width: 100%;
+  min-width: 100%;
+  flex-basis: 100%;
+}
+
+.container--split-grid > .row > .col:nth-child(1) .pattern__inner svg {
+  top: 100% !important;
+  margin-top: -6.25rem;
+  left: 25%;
+}
+
+.container--split-grid > .row > .col:nth-child(3) .pattern__inner svg {
+  top: 0 !important;
+  margin-top: -6.25rem;
+}
+
+@supports (display: grid) {
+  @media (min-width: 62em) {
+    .container--split-grid > .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: min-content min-content;
+      grid-template-areas: "col1 col2" "col3 col2";
+    }
+    .container--split-grid > .row > .col {
+      max-width: 100%;
+    }
+    .container--split-grid > .row > .col:nth-child(1) {
+      grid-area: col1;
+    }
+    .container--split-grid > .row > .col:nth-child(1) .pattern__inner svg {
+      left: 50%;
+    }
+    .container--split-grid > .row > .col:nth-child(2) {
+      grid-area: col2;
+    }
+    .container--split-grid > .row > .col:nth-child(3) {
+      grid-area: col3;
+    }
+  }
+}
+
+@media (min-width: 36em) {
+  .container--form {
+    padding: 4rem 6.625rem 1rem 6.625rem;
+  }
+}
+
+@media (min-width: 62em) {
+  .container--form {
+    padding: 5rem 20.1875rem 2rem 20.1875rem;
+  }
+}
+
+.container--cta {
+  padding-bottom: 12rem;
+  min-height: 20rem;
+}
+
+.container--cta[class*="bg-"]:not([class*="stroke-"]) .pattern__inner svg {
+  stroke: var(--colour-primary) !important;
+  opacity: 1;
+}
+
+@media (min-width: 36em) {
+  .container--cta {
+    padding-bottom: 1rem;
+    padding-right: 17.5rem;
+    min-height: 27.5rem;
+  }
+  .container--cta.pattern--bottom .pattern__inner svg {
+    transform: translate(-50%, -50%) rotate(90deg);
+    top: 55%;
+    left: 85%;
+  }
+}
+
+@media (min-width: 62em) {
+  .container--cta {
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+    padding-right: 32.5rem;
+    min-height: 30rem;
+  }
+}
+
+.container--statement {
+  padding-top: 1.5rem;
+}
+
+.container--statement > * {
+  font-weight: bold;
+  text-align: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 1rem;
+  max-width: 100%;
+}
+
+.container--statement > *:first-child {
+  padding-top: 1.5rem;
+  border-top: 2px solid currentColor;
+}
+
+.container--statement > *:last-child {
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid currentColor;
+}
+
+@media (min-width: 36em) {
+  .container--statement > *:first-child {
+    padding-top: 2rem;
+  }
+  .container--statement > *:last-child {
+    padding-bottom: 2rem;
+  }
+}
+
+.container--statement[class*="bg-"]:not(.bg-secondary-2):not(.bg-secondary-3):not(.bg-secondary-4):not(.bg-light) {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.container--statement[class*="bg-"]:not(.bg-secondary-2):not(.bg-secondary-3):not(.bg-secondary-4):not(.bg-light) > *:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+.container--statement[class*="bg-"]:not(.bg-secondary-2):not(.bg-secondary-3):not(.bg-secondary-4):not(.bg-light) > *:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+@media (min-width: 36em) {
+  .container--statement[class*="bg-"]:not(.bg-secondary-2):not(.bg-secondary-3):not(.bg-secondary-4):not(.bg-light) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+.container .container.container--statement,
+.container--statement {
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 36em) {
+  .container .container.container--statement,
+  .container--statement {
+    padding-bottom: 3rem;
+  }
+}
+
+@media (min-width: 62em) {
+  .container .container.container--statement,
+  .container--statement {
+    padding-bottom: 4rem;
+  }
+}
+
+@media (min-width: 62em) {
+  .container--limit-width {
+    padding-right: 32.5rem;
+  }
+}
+
+/*# sourceMappingURL=maps/containers.css.map */

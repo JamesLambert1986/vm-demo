@@ -1,0 +1,144 @@
+.detail-list .table__wrapper {
+  margin-bottom: 1rem;
+}
+
+.detail-list table th {
+  font-weight: normal;
+  font-variation-settings: 'wght' 300;
+}
+
+.detail-list table td {
+  font-weight: bold;
+  font-variation-settings: 'wght' 600;
+}
+
+.detail-list:not(.detail-list--grouped) table tbody:first-child tr:first-child {
+  border-top-width: 1px;
+}
+
+.detail-list:not(.detail-list--grouped) table tr:last-child {
+  border-bottom: none;
+}
+
+.detail-list:not(.detail-list--grouped) table th, .detail-list:not(.detail-list--grouped) table td {
+  padding: 2rem 0;
+  width: 100%;
+  display: block;
+}
+
+.detail-list:not(.detail-list--grouped) table th > *:last-child, .detail-list:not(.detail-list--grouped) table td > *:last-child {
+  margin-bottom: 0;
+}
+
+.detail-list:not(.detail-list--grouped) table th {
+  padding-bottom: 0.5rem;
+}
+
+.detail-list:not(.detail-list--grouped) table td {
+  padding-top: 0;
+}
+
+@media (min-width: 36em) {
+  .detail-list .table__wrapper {
+    margin-bottom: 3rem;
+  }
+  .detail-list:not(.detail-list--grouped) table th, .detail-list:not(.detail-list--grouped) table td {
+    padding: 2rem 0;
+    display: table-cell;
+  }
+  .detail-list:not(.detail-list--grouped) table th > *:last-child, .detail-list:not(.detail-list--grouped) table td > *:last-child {
+    margin-bottom: 0;
+  }
+  .detail-list:not(.detail-list--grouped) table th {
+    width: 33%;
+  }
+  .detail-list:not(.detail-list--grouped) table td {
+    padding-left: 1rem;
+  }
+  .detail-list:not(.detail-list--grouped) table td + td {
+    text-align: right;
+    width: 0%;
+  }
+}
+
+@media (min-width: 62em) {
+  .detail-list {
+    display: flex;
+  }
+  .detail-list h2 {
+    max-width: 20rem;
+    padding-right: 1.5rem;
+    margin-bottom: 4rem;
+  }
+  .detail-list .table__wrapper {
+    padding-right: 0;
+    margin-bottom: 4rem;
+  }
+  .detail-list table th {
+    width: 25%;
+  }
+  .detail-list:not(.detail-list--grouped) table th {
+    width: 25%;
+  }
+  .detail-list:not(.detail-list--grouped) table td {
+    padding-left: 1rem;
+  }
+}
+
+.detail-list + .detail-list {
+  padding-top: 3rem;
+  border-top: 2px solid currentColor;
+  border-color: var(--colour-border) ;
+}
+
+.detail-list--grouped {
+  border-top: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  border-color: var(--colour-border) ;
+  padding-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.detail-list--grouped table {
+  border: none;
+}
+
+.detail-list--grouped table tbody:first-child tr:first-child,
+.detail-list--grouped table tr {
+  border: none;
+}
+
+.detail-list--grouped table th {
+  padding-left: 0;
+}
+
+@media (min-width: 36em) {
+  .detail-list--grouped {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .detail-list--grouped h2 {
+    width: 100%;
+  }
+  .detail-list--grouped .table__wrapper {
+    width: auto;
+    flex-grow: 1;
+  }
+  .detail-list--grouped table th {
+    width: 33%;
+  }
+}
+
+@media (min-width: 62em) {
+  .detail-list--grouped table th {
+    width: 25%;
+  }
+}
+
+.detail-list--grouped + .detail-list--grouped {
+  padding-top: 0;
+  border-top: 0;
+}
+
+/*# sourceMappingURL=maps/detail-list.css.map */

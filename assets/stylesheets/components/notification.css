@@ -1,0 +1,97 @@
+/* Notfication */
+.notification {
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+  text-align: left !important;
+  padding-top: 1rem;
+  padding-bottom: 0;
+}
+
+@media (max-width: 36em) {
+  .notification {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.notification .notification__icon {
+  min-width: 2.5rem;
+  max-width: 2.5rem;
+}
+
+@media (min-width: 36em) {
+  .notification .notification__icon {
+    width: 5rem;
+  }
+}
+
+.notification .notification__icon.svg__wrapper svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  vertical-align: text-bottom;
+}
+
+.notification .notification__title {
+  flex: 1 1 calc(100% - 5rem);
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 62em) {
+  .notification .notification__title {
+    flex: 1 1 calc(50% - 5rem);
+  }
+}
+
+.notification .notification__action {
+  flex: 1 1 auto;
+  min-width: 100%;
+  padding-bottom: 0.8125rem;
+  margin-top: -0.125rem;
+}
+
+.notification .notification__action .btn-link {
+  margin-bottom: -1px;
+}
+
+@media (min-width: 62em) {
+  .notification .notification__action {
+    min-width: 0;
+    text-align: right;
+  }
+}
+
+.notification .notification__icon ~ .notification__action {
+  padding-left: 2.5rem;
+}
+
+.notification .notification__close {
+  flex: 1 1 auto;
+  text-align: right;
+}
+
+.notification .notification__close button {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.notification .notification__close button:hover, .notification .notification__close button:focus {
+  color: var(--colour-hover) ;
+}
+
+.notification .notification__close button:active {
+  color: var(--colour-active) ;
+}
+
+.notification .notification__close .svg__wrapper {
+  display: block;
+}
+
+.notification .notification__close .svg__wrapper svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  vertical-align: text-bottom;
+}
+
+/*# sourceMappingURL=maps/notification.css.map */

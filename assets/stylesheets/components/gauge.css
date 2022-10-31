@@ -1,0 +1,141 @@
+.gauge {
+  --value-padding: 1rem;
+  max-width: 40rem;
+  margin-bottom: 4rem;
+  background-color: transparent !important;
+}
+
+.gauge:not([class*="colour-"]) {
+  --colour: var(--colour-secondary);
+}
+
+@media (min-width: 36em) {
+  .gauge {
+    --value-padding: 1.5rem;
+  }
+}
+
+.gauge__progress, .gauge__remaining {
+  min-height: 6rem;
+}
+
+.gauge__progress {
+  border-left: 2px solid var(--colour);
+  padding-left: var(--value-padding);
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.gauge__progress > * {
+  max-width: 11rem;
+}
+
+.gauge__progress > *:last-child {
+  padding-bottom: 0;
+  margin-bottom: 1rem;
+}
+
+.gauge__progress:before, .gauge__progress:after {
+  content: "";
+  display: block;
+  height: 1rem;
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: -2px;
+}
+
+.gauge__progress:before {
+  width: calc(100% + 2px);
+  background: var(--colour-border);
+}
+
+.gauge__progress:after {
+  width: calc(var(--percent) + 2px);
+  background: var(--colour);
+  z-index: 2;
+}
+
+.gauge__remaining {
+  text-align: right;
+  margin-left: auto;
+  border-right: 2px solid var(--colour-border);
+  padding-right: var(--value-padding);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  max-width: 12.5rem;
+}
+
+.gauge__remaining > *:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+@supports (background: conic-gradient(red, blue)) {
+  .gauge--radial {
+    --pie-size: 12.5rem;
+    --pie-thickness: 1rem;
+  }
+  @media (min-width: 36em) {
+    .gauge--radial {
+      --pie-size: 15rem;
+    }
+  }
+  @media (min-width: 62em) {
+    .gauge--radial {
+      --pie-thickness: 1.5rem;
+    }
+  }
+  .gauge--radial .gauge__progress {
+    border: none;
+    padding: var(--pie-thickness);
+    margin-bottom: 0;
+    background: radial-gradient(circle closest-side, transparent 100%, white 0), conic-gradient(var(--colour) 0, var(--colour) var(--percent), var(--colour-border) 0, var(--colour-border) 100%);
+    width: var(--pie-size);
+    height: var(--pie-size);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .gauge--radial .gauge__progress > * {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    z-index: 2;
+    position: relative;
+  }
+  .gauge--radial .gauge__progress > *:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  .gauge--radial .gauge__progress:before {
+    background: white;
+    top: var(--pie-thickness);
+    left: var(--pie-thickness);
+    height: calc(100% - var(--pie-thickness) - var(--pie-thickness));
+    width: calc(100% - var(--pie-thickness) - var(--pie-thickness));
+    border-radius: 50%;
+    z-index: 1;
+  }
+  .gauge--radial .gauge__progress:after {
+    display: none;
+  }
+  .gauge--radial:not(.gauge--radial-remaining) .gauge__remaining {
+    display: none;
+  }
+  .gauge--radial.gauge--radial-remaining .gauge__remaining {
+    min-height: 0;
+    border: none;
+    padding-right: 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1.5rem;
+  }
+}
+
+/*# sourceMappingURL=maps/gauge.css.map */

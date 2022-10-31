@@ -1,0 +1,313 @@
+.product-cards--investments .product-card__header .product-card__title {
+  width: 100%;
+  padding-bottom: 3.75rem;
+  padding-right: 7rem;
+  position: relative;
+  padding-bottom: 2rem !important;
+}
+
+.product-cards--investments .product-card__icon {
+  width: 5rem;
+  height: 5rem;
+  margin-left: 2rem;
+  float: right;
+  color: #000000 ;
+  color: var(--colour-body) ;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: auto;
+}
+
+.product-cards--investments .product-card__icon .svg__wrapper,
+.product-cards--investments .product-card__icon .svg__wrapper svg {
+  height: 100%;
+  width: 100%;
+}
+
+/* Fund mix */
+.fund-mix {
+  display: block;
+  height: 4rem;
+  margin-bottom: 2rem;
+}
+
+.fund-mix p {
+  position: absolute;
+  left: 2.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.fund-mix .fund-mix__display {
+  width: 1.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.fund-mix__lower {
+  position: relative;
+}
+
+.fund-mix__lower p {
+  top: 0;
+}
+
+.fund-mix__lower .fund-mix__display {
+  background: #69E1E6 ;
+  background: var(--colour-secondary-2) ;
+  border-bottom: 2px solid white;
+}
+
+.fund-mix__higher {
+  position: relative;
+}
+
+.fund-mix__higher p {
+  top: auto;
+  bottom: 0;
+}
+
+.fund-mix__higher .fund-mix__display {
+  background: #D03788 ;
+  background: var(--colour-secondary) ;
+}
+
+.fund-mix__range {
+  display: none;
+}
+
+.fund-mix--large {
+  height: 16rem;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  max-width: 25rem;
+}
+
+.fund-mix--large p {
+  left: 9rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.fund-mix--large .fund-mix__display {
+  width: 6rem;
+}
+
+.fund-mix--large .fund-mix__range {
+  display: block;
+  position: relative;
+  height: 0;
+  z-index: -1;
+}
+
+.fund-mix--large .fund-mix__range p {
+  display: none;
+}
+
+.fund-mix--large .fund-mix__range .fund-mix__display {
+  background: #6D7173 ;
+  background: var(--colour-muted) ;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  margin-top: -1.5rem;
+  margin-bottom: -1.5rem;
+  width: 8rem;
+  height: 3rem;
+}
+
+.fund-mix__key {
+  position: relative;
+}
+
+.fund-mix__key:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0.25rem;
+  left: 0;
+  height: 1.125rem;
+  width: 1.125rem;
+  margin-left: -2rem;
+  background: currentColor;
+}
+
+.fund-mix__key--inline {
+  padding-left: 2rem;
+  display: block;
+}
+
+.fund-mix__key--inline:before {
+  margin-left: 0;
+}
+
+.fund-mix__key--lower:before {
+  background: #69E1E6 ;
+  background: var(--colour-secondary-2) ;
+}
+
+.fund-mix__key--range:before {
+  background: #6D7173 ;
+  background: var(--colour-muted) ;
+}
+
+.fund-mix__key--higher:before {
+  background: #D03788 ;
+  background: var(--colour-secondary) ;
+}
+
+/* Individual approach page */
+.approach-chart .approach-chart__pie .chart__wrapper {
+  margin-bottom: 2rem;
+}
+
+.approach-chart .approach-chart__pie .chart__wrapper .pie svg circle {
+  stroke-width: 4px;
+  --stroke-width-hover: 5px;
+}
+
+@media (min-width: 36em) {
+  .approach-chart .approach-chart__pie {
+    display: flex;
+    align-items: center;
+  }
+  .approach-chart .approach-chart__content {
+    flex: 0 0 50%;
+    padding-left: 0.5rem;
+  }
+  .approach-chart .approach-chart__content > a:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 62em) {
+  .approach-chart {
+    min-height: 46rem;
+  }
+  .approach-chart > .row {
+    position: relative;
+  }
+  .approach-chart .approach-chart__pie {
+    position: absolute;
+    top: 0;
+    right: 8.33333%;
+    display: block;
+  }
+  .approach-chart .approach-chart__pie .chart__wrapper {
+    width: 100%;
+  }
+  .approach-chart .approach-chart__pie .chart__wrapper .pie {
+    width: 100%;
+    padding-top: 100%;
+    flex: none;
+  }
+  .approach-chart .approach-chart__pie .chart__wrapper .pie svg circle {
+    stroke-width: 4px;
+    --stroke-width-hover: 5px;
+  }
+  .approach-chart .approach-chart__content {
+    padding-left: 0;
+  }
+}
+
+/* Compare Approach page */
+.filter--investments-compare .form-group .custom-control {
+  flex: 0 0 100%;
+}
+
+.filter--investments-compare .option-content {
+  margin-left: 0;
+  padding-left: 0;
+  border: none;
+  overflow: visible;
+}
+
+.filter--investments-compare .option-content > .container:first-child {
+  padding-top: 2rem;
+}
+
+.filter--investments-compare .option-content .chart__wrapper {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.filter--investments-compare .filter--investments-compare .form-group--btns-inline .custom-control label {
+  width: 100%;
+}
+
+@media (min-width: 36em) {
+  .filter--investments-compare .filter--investments-compare .form-group--btns-inline .custom-control label {
+    width: auto;
+  }
+}
+
+/* Add line transitions to chart */
+#clone-chart-container {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+#clone-chart-container .chart__wrapper {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@media (min-width: 36em) {
+  #clone-chart-container {
+    left: 0;
+    width: 100%;
+  }
+  #clone-chart-container .chart__wrapper {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 62em) {
+  #clone-chart-container {
+    bottom: 2rem;
+    left: 0.5rem;
+    width: calc(100% - 1rem);
+  }
+}
+
+#clone-chart-container .chart__key,
+#clone-chart-container .chart .chart__y-axis,
+#clone-chart-container .chart .chart__x-axis--mobile,
+#clone-chart-container .chart .chart__x-axis > *,
+body.js-enabled:not(.ie) #filter-options .chart .chart__x-axis > .line {
+  opacity: 0;
+}
+
+#clone-chart-container .chart .chart__x-axis > .line {
+  opacity: 1 !important;
+}
+
+#clone-chart svg.line path {
+  transition: all 0.75s ease-out;
+}
+
+/* IE11 Fixes */
+@media (min-width: 36em) {
+  body.ie #ChargesCalc .btn.btn-secondary {
+    margin-top: 2.75rem !important;
+  }
+  body.ie #ChargesCalc .form-group .form-control__wrapper[data-prefix]:before,
+  body.ie #ChargesCalc .form-group .form-control__wrapper[data-suffix]:before {
+    height: 2.25rem;
+    line-height: 2.25rem;
+    top: auto;
+  }
+}
+
+body.ie.animate #how-fund-invested {
+  transform: none !important;
+}
+
+/*# sourceMappingURL=maps/investments.css.map */

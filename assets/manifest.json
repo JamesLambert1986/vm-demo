@@ -1,0 +1,37 @@
+{
+  "name" : "Virgin Money Design System",
+	"short_name" : "Pitch",
+	"description" : "Pitch is our Design System. It's our digital playing field, designed to help teams work better together.",
+  "theme_color": "#E10A0A",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "scope": "/design/",
+  "start_url": "/design/index.html",
+  "icons": [
+    {
+      "src": "favicons/vm/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "favicons/vm/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "favicons/vm/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "favicons/vm/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "favicons/vm/icon-1024x1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ]
+}

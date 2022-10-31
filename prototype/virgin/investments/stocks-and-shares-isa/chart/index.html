@@ -1,0 +1,986 @@
+
+<div class="container pb-0">
+  <h2 class="text-secondary">See how your money can grow</h2>
+  <div class="row">
+    <div class="col-sm-6 col-md-3">
+
+      <span class="lead d-block pb-1 text-secondary pr-3">Your investment could be worth</span>
+      <span class="h3 pb-3 text-secondary" ><span id="projection-amount">£15,600</span></span>
+    </div>
+    <div class="col-sm-6 col-md-3">
+
+      <span class="body d-block pb-1 pr-3">If the market performs weaker it could be worth</span>
+      <span class="h4 pt-2 pb-3" ><span id="TotalAmountPayable">£12,800</span></span>
+    </div>
+    <div class="col-sm-6 col-md-3">
+
+      <span class="body d-block pb-1 pr-3">If the market performs stronger it could be worth</span>
+      <span class="h4 pt-2 pb-3" >£<span id="TotalAmountPayable">18,400</span></span>
+    </div>
+    <div class="col-sm-6 col-md-3">
+
+      <span class="body d-block pb-1 pr-3">If saved in a cash ISA at 1.00% it could be worth</span>
+      <span class="h4 pt-2 pb-3" >£<span id="TotalAmountPayable">12,200</span></span>
+    </div>
+  </div>
+  <hr/>
+</div>  
+
+
+
+
+
+
+
+
+<div id="chart" class="container   pt-0 pb-0   ">
+  
+
+
+  
+    
+  
+
+
+<link href="../../../../../assets/stylesheets/components/charts.css?" media="screen" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+<div class="container--chart chart--line chart--basic" style="" data-style="" data-group-count="4" data-set-count="3">
+
+
+
+<div class="chart__key">
+
+  
+  <span class="key__title h6">Key:</span>
+  
+  
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+
+    
+    
+     
+    
+     
+  
+
+  
+  
+  
+    
+
+    
+    
+     
+    
+     
+  
+
+  
+  
+  
+    
+
+    
+    
+     
+    
+     
+  
+  
+  
+
+  
+  
+  
+    
+
+    
+    
+     
+    
+     
+  
+
+  
+  
+  
+    
+
+    
+    
+     
+    
+     
+  
+
+  
+  
+  
+    
+
+    
+    
+     
+    
+     
+  
+  
+  
+
+  
+  
+  
+    
+
+    
+    
+     
+    
+     
+  
+
+  
+  
+  
+    
+
+    
+    
+     
+    
+     
+  
+
+  
+  
+  
+    
+
+    
+    
+     
+    
+     
+  
+  
+  
+
+  
+  
+  
+    
+
+    
+    
+     
+    
+     
+  
+
+  
+  
+  
+    
+
+    
+    
+     
+    
+     
+  
+
+  
+  
+  
+    
+
+    
+    
+     
+    
+     
+  
+  
+
+  
+
+  
+  
+
+  
+  
+
+  <!--<span class="key__btn body " data-chartid="rangechart" data-index="1"><span class="chart-colour-1"></span>Cash</span>-->
+
+
+  
+  
+  
+
+  <div class="custom-control custom-checkbox  line--thin">
+    <input type="checkbox" class="custom-control-input" id="rangechart-key1" data-index="1" data-chartid="rangechart" checked="checked">
+    <label class="custom-control-label chart-colour-1" for="rangechart-key1"><span class="text-body">Cash</span></label>
+  </div>
+
+  
+
+  
+  
+
+  <!--<span class="key__btn body " data-chartid="rangechart" data-index="2"><span class="chart-colour-2"></span>Stocks</span>-->
+
+
+  
+  
+
+  <div class="custom-control custom-checkbox  ">
+    <input type="checkbox" class="custom-control-input" id="rangechart-key2" data-index="2" data-chartid="rangechart" checked="checked">
+    <label class="custom-control-label chart-colour-1" for="rangechart-key2"><span class="text-body">Stocks</span></label>
+  </div>
+
+  
+
+  
+  
+
+  <!--<span class="key__btn body " data-chartid="rangechart" data-index="3"><span class="chart-colour-3"></span>Savings</span>-->
+
+
+  
+  
+
+  <div class="custom-control custom-checkbox  line--thin">
+    <input type="checkbox" class="custom-control-input" id="rangechart-key3" data-index="3" data-chartid="rangechart" checked="checked">
+    <label class="custom-control-label chart-colour-1" for="rangechart-key3"><span class="text-body">Savings</span></label>
+  </div>
+
+  
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="chart__wrapper">
+  <div class="chart" id="rangechart" >
+
+    
+    
+    <div class="chart__inner">
+      <div class="chart__y-axis">
+
+      
+      
+
+      
+      
+      
+
+      <div class="group" style="--percent: 0%;" data-percent="0">
+        <span class="chart__label">0</span>
+      </div>
+      
+      
+
+      
+      
+      
+
+      <div class="group" style="--percent: 20%;" data-percent="20">
+        <span class="chart__label">£5k</span>
+      </div>
+      
+      
+
+      
+      
+      
+
+      <div class="group" style="--percent: 20%;" data-percent="20">
+        <span class="chart__label">£10k</span>
+      </div>
+      
+      
+
+      
+      
+      
+
+      <div class="group" style="--percent: 20%;" data-percent="20">
+        <span class="chart__label">£15k</span>
+      </div>
+      
+      
+
+      
+      
+      
+
+      <div class="group" style="--percent: 20%;" data-percent="20">
+        <span class="chart__label">£20k</span>
+      </div>
+      
+      
+
+      
+      
+      
+
+      <div class="group" style="--percent: 20%;" data-percent="20">
+        <span class="chart__label">£25k</span>
+      </div>
+      
+      
+      </div>
+      <div class="chart__x-axis">
+
+        <div class="chart__guidelines">
+        
+        
+
+        
+        
+        
+
+        <div class="guideline" style="--percent: 0%;" data-percent="0">
+        </div>
+        
+
+        
+        
+        
+
+        <div class="guideline" style="--percent: 20%;" data-percent="20">
+        </div>
+        
+
+        
+        
+        
+
+        <div class="guideline" style="--percent: 20%;" data-percent="20">
+        </div>
+        
+
+        
+        
+        
+
+        <div class="guideline" style="--percent: 20%;" data-percent="20">
+        </div>
+        
+
+        
+        
+        
+
+        <div class="guideline" style="--percent: 20%;" data-percent="20">
+        </div>
+        
+
+        
+        
+        
+
+        <div class="guideline" style="--percent: 20%;" data-percent="20">
+        </div>
+        
+        </div>
+
+        <ul class="list-unstyled">
+          
+          
+          
+          <li class="group 4">        
+            
+            <div class="data__wrapper">
+            
+            
+            
+
+            
+            
+
+            
+      
+            
+
+            
+
+            
+              
+            
+
+            
+            
+            
+            
+            
+
+            
+            <div class="data  tooltip tooltip--left tooltip--top tooltip--short chart-colour-1" data-index="1" style="--percent: 4%;" data-percent="4">
+              <span data-tooltip="">
+                <strong class="text-nowrap">1st June 2018: £2000</strong>
+              </span>
+            </div>
+            
+            
+
+
+            
+
+            
+            
+
+            
+      
+            
+
+            
+
+            
+              
+            
+
+            
+            
+            
+            
+
+            
+            <div class="data  tooltip tooltip--left tooltip--top tooltip--short chart-colour-1" data-index="2" style="--percent: 4%;" data-percent="4">
+              <span data-tooltip="">
+                <strong class="text-nowrap">1st June 2018: £1300</strong>
+              </span>
+            </div>
+            
+            
+
+
+            
+
+            
+            
+
+            
+      
+            
+
+            
+
+            
+              
+            
+
+            
+            
+            
+            
+
+            
+            <div class="data  tooltip tooltip--left tooltip--top tooltip--short chart-colour-1" data-index="3" style="--percent: 4%;" data-percent="4">
+              <span data-tooltip="">
+                <strong class="text-nowrap">1st June 2018: £1300</strong>
+              </span>
+            </div>
+            
+            
+
+
+            
+            </div>
+            <span class="chart__label">June</span>
+            <span class="marker"></span>
+          </li>
+          
+          
+          <li class="group 4">        
+            
+            <div class="data__wrapper">
+            
+            
+            
+
+            
+            
+
+            
+      
+            
+
+            
+
+            
+
+            
+            
+            
+            
+            
+
+            
+            <div class="data  tooltip tooltip--center tooltip--top tooltip--short chart-colour-1" data-index="1" style="--percent: 12%;" data-percent="12">
+              <span data-tooltip="">
+                <strong class="text-nowrap">1st July 2018: £13k</strong>
+              </span>
+            </div>
+            
+            
+
+
+            
+
+            
+            
+
+            
+      
+            
+
+            
+
+            
+
+            
+            
+            
+            
+
+            
+            <div class="data  tooltip tooltip--center tooltip--top tooltip--short chart-colour-1" data-index="2" style="--percent: 7.199999999999999%;" data-percent="7.199999999999999">
+              <span data-tooltip="">
+                <strong class="text-nowrap">1st July 2018: £13k</strong>
+              </span>
+            </div>
+            
+            
+
+
+            
+
+            
+            
+
+            
+      
+            
+
+            
+
+            
+
+            
+            
+            
+            
+
+            
+            <div class="data  tooltip tooltip--center tooltip--top tooltip--short chart-colour-1" data-index="3" style="--percent: 6%;" data-percent="6">
+              <span data-tooltip="">
+                <strong class="text-nowrap">1st July 2018: £13k</strong>
+              </span>
+            </div>
+            
+            
+
+
+            
+            </div>
+            <span class="chart__label">July</span>
+            <span class="marker"></span>
+          </li>
+          
+          
+          <li class="group 4">        
+            
+            <div class="data__wrapper">
+            
+            
+            
+
+            
+            
+
+            
+      
+            
+
+            
+
+            
+
+            
+              
+            
+            
+            
+            
+            
+
+            
+            <div class="data  tooltip tooltip--right tooltip--top tooltip--short chart-colour-1" data-index="1" style="--percent: 32%;" data-percent="32">
+              <span data-tooltip="">
+                <strong class="text-nowrap">1st August 2018: £13k</strong>
+              </span>
+            </div>
+            
+            
+
+
+            
+
+            
+            
+
+            
+      
+            
+
+            
+
+            
+
+            
+              
+            
+            
+            
+            
+
+            
+            <div class="data  tooltip tooltip--right tooltip--top tooltip--short chart-colour-1" data-index="2" style="--percent: 20%;" data-percent="20">
+              <span data-tooltip="">
+                <strong class="text-nowrap">1st August 2018: £13k</strong>
+              </span>
+            </div>
+            
+            
+
+
+            
+
+            
+            
+
+            
+      
+            
+
+            
+
+            
+
+            
+              
+            
+            
+            
+            
+
+            
+            <div class="data  tooltip tooltip--right tooltip--top tooltip--short chart-colour-1" data-index="3" style="--percent: 12%;" data-percent="12">
+              <span data-tooltip="">
+                <strong class="text-nowrap">1st August 2018: £13k</strong>
+              </span>
+            </div>
+            
+            
+
+
+            
+            </div>
+            <span class="chart__label">August</span>
+            <span class="marker"></span>
+          </li>
+          
+          
+          <li class="group 4">        
+            
+            <div class="data__wrapper">
+            
+            
+            
+
+            
+            
+
+            
+      
+            
+
+            
+
+            
+
+            
+              
+            
+            
+            
+            
+            
+
+            
+            <div class="data  tooltip tooltip--right tooltip--top tooltip--short chart-colour-1" data-index="1" style="--percent: 72%;" data-percent="72">
+              <span data-tooltip="">
+                <strong class="text-nowrap">1st September 2018: £13k</strong>
+              </span>
+            </div>
+            
+            
+
+
+            
+
+            
+            
+
+            
+      
+            
+
+            
+
+            
+
+            
+              
+            
+            
+            
+            
+
+            
+            <div class="data  tooltip tooltip--right tooltip--top tooltip--short chart-colour-1" data-index="2" style="--percent: 48%;" data-percent="48">
+              <span data-tooltip="">
+                <strong class="text-nowrap">1st September 2018: £13k</strong>
+              </span>
+            </div>
+            
+            
+
+
+            
+
+            
+            
+
+            
+      
+            
+
+            
+
+            
+
+            
+              
+            
+            
+            
+            
+
+            
+            <div class="data  tooltip tooltip--right tooltip--top tooltip--short chart-colour-1" data-index="3" style="--percent: 20%;" data-percent="20">
+              <span data-tooltip="">
+                <strong class="text-nowrap">1st September 2018: £13k</strong>
+              </span>
+            </div>
+            
+            
+
+
+            
+            </div>
+            <span class="chart__label">September</span>
+            <span class="marker"></span>
+          </li>
+          
+        </ul>
+        <!-- y-axis lines added here -->
+        <!-- target lines added here -->
+
+        
+        
+
+          
+          
+
+          
+          
+          
+
+          <svg viewBox="0 0 200 100" class="line line1  chart-colour-1  line--thin " style="z-index: 3;" data-index="1" preserveAspectRatio="none">
+          
+          <path fill="none" d="M 0,96 L 66.66666666666667,88 L 133.33333333333334,68 L 200,28 "></path>
+          </svg>
+        
+
+          
+          
+
+          
+          
+
+          <svg viewBox="0 0 200 100" class="line line2  chart-colour-1   " style="z-index: 2;" data-index="2" preserveAspectRatio="none">
+          
+          <path fill="none" d="M 0,96 L 66.66666666666667,92.8 L 133.33333333333334,80 L 200,52 "></path>
+          </svg>
+        
+
+          
+          
+
+          
+          
+
+          <svg viewBox="0 0 200 100" class="line line3  chart-colour-1  line--thin " style="z-index: 1;" data-index="3" preserveAspectRatio="none">
+          
+          <path fill="none" d="M 200,80 L 133.33333333333334,88 L 66.66666666666667,94 L 0,96 "></path>
+          </svg>
+        
+
+        
+
+        <svg viewBox="0 0 200 100" class="range range1 chart-colour-1" style="z-index: 1;" data-index="0" preserveAspectRatio="none">
+        
+        <path fill="none" d="M 0,96 L 66.66666666666667,88 L 133.33333333333334,68 L 200,28 L 200,80 L 133.33333333333334,88 L 66.66666666666667,94 L 0,96 "></path>
+        </svg>
+        
+
+      </div>
+
+      <div class="chart__x-axis--mobile">
+        <span class="chart__label">June</span>
+        <span class="chart__label">September</span>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
+</div>
+
+  <p class"small">Graph source. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus vulputate diam eu pretium.</p>
+  
+  
+  
+</div>
+
+

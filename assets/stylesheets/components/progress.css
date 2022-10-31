@@ -1,0 +1,198 @@
+.progress__container {
+  padding: 1rem 1rem 1.5rem 1rem;
+  border-bottom: 1px solid currentColor;
+  border-color: var(--colour-border) ;
+}
+
+@media (min-width: 36em) {
+  .progress__container {
+    padding: 1.5rem 1.5rem 2rem 1.5rem;
+  }
+}
+
+@media (min-width: 62em) {
+  .progress__container {
+    padding: 2rem 7.5rem 2rem 7.5rem;
+  }
+}
+
+.progress {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -1rem;
+  margin-left: -1rem;
+  counter-reset: progress;
+  position: relative;
+  padding-bottom: 0;
+  z-index: 1;
+}
+
+@media (min-width: 36em) {
+  .progress {
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.progress li {
+  min-height: 1px;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  flex: 1 0 0px;
+  text-align: center;
+  counter-increment: progress;
+}
+
+.progress li:first-child:nth-last-child(4),
+.progress li:first-child:nth-last-child(4) ~ li {
+  max-width: 25%;
+}
+
+.progress li:first-child:nth-last-child(5),
+.progress li:first-child:nth-last-child(5) ~ li {
+  max-width: 20%;
+}
+
+.progress__step-number {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-variation-settings: 'wght' 600;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  width: 1.5rem;
+  border: 1px solid currentColor;
+  color: var(--colour-muted) ;
+  border-color: var(--colour-border) ;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  text-indent: -500%;
+  padding: 0;
+}
+
+@media (min-width: 36em) {
+  .progress__step-number {
+    font-size: 1rem;
+    height: 2rem;
+    line-height: 2rem;
+    width: 2rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.progress__step-number:before {
+  content: counter(progress);
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  text-indent: 0;
+  top: 0;
+  left: 0;
+  line-height: 1.375rem;
+}
+
+@media (min-width: 36em) {
+  .progress__step-number:before {
+    line-height: 1.875rem;
+  }
+}
+
+[data-status="done"] .progress__step-number,
+[data-status="current"] .progress__step-number {
+  background: var(--colour-primary) ;
+  border-color: var(--colour-primary) ;
+  color: var(--colour-white) ;
+  font-weight: 900;
+  font-variation-settings: 'wght' 700;
+}
+
+[data-status="done"] .progress__step-number:before {
+  content: "";
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3e%3cpolyline points='5,13.5 9,17.5 19,6.5' stroke='%23FFFFFF' stroke-width='2px' stroke-linejoin='round' fill='transparent' /%3e%3c/svg%3e");
+  background-size: 1rem 1rem;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+@media (min-width: 36em) {
+  [data-status="done"] .progress__step-number:before {
+    background-size: 1.5rem 1.5rem;
+  }
+}
+
+.progress__step-title {
+  display: none;
+  color: var(--colour-body-light) ;
+  padding-bottom: 0;
+}
+
+.progress__step-title.current {
+  color: var(--colour-body-highlight) ;
+  font-weight: 700;
+}
+
+@media (min-width: 36em) {
+  .progress__step-title {
+    display: block;
+  }
+}
+
+.progress__step-status {
+  display: block;
+  height: 2px;
+  width: calc(100% - 1.5rem - 8px);
+  min-width: calc(100% - 1.5rem - 8px);
+  background-color: var(--colour-border) ;
+  position: absolute;
+  top: calc(0.75rem - 1px);
+  left: calc(50% + 0.75rem + 4px);
+  padding: 0;
+  z-index: -2;
+  overflow: hidden;
+}
+
+@media (min-width: 36em) {
+  .progress__step-status {
+    width: calc(100% - 2rem - 8px);
+    min-width: calc(100% - 2rem - 8px);
+    top: calc(1rem - 1px);
+    left: calc(50% + 1rem + 4px);
+  }
+}
+
+[data-status="done"] .progress__step-status:after {
+  width: 100%;
+}
+
+.progress__step-status:after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: var(--progress) ;
+  background-color: var(--colour-primary) ;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.progress li:last-child .progress__step-status {
+  display: none;
+}
+
+.progress__current {
+  text-align: center;
+  padding-bottom: 0;
+  display: block;
+  font-weight: 900;
+}
+
+@media (min-width: 36em) {
+  .progress__current {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=maps/progress.css.map */

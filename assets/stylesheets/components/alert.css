@@ -1,0 +1,162 @@
+.alert-msg {
+  --bg-colour: var(--colour-light);
+  margin-bottom: 3rem;
+  padding-top: 1rem;
+  min-height: 5rem;
+  position: relative;
+  background: var(--colour-light) ;
+  text-align: left !important;
+  padding-left: 4.5rem;
+  padding-right: 1.5rem;
+  position: relative;
+  margin-left: -2rem;
+  margin-right: -2rem;
+}
+
+.alert-msg .alert__title {
+  padding-bottom: 1rem;
+}
+
+.alert-msg p {
+  margin-left: 0;
+}
+
+.alert-msg > :first-child {
+  max-width: calc(100% - 4rem);
+}
+
+.alert-msg > :last-child:not(.btn) {
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 36em) {
+  .alert-msg {
+    padding-top: 1.5rem;
+    padding-left: 6.5rem;
+    min-height: 6.5rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.alert-msg > .strip {
+  width: 3rem;
+  background: var(--colour-alert-highlight) ;
+  padding: 1.25rem 0.75rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+@media (min-width: 36em) {
+  .alert-msg > .strip {
+    width: 5rem;
+    padding: 2rem 1.5rem;
+  }
+}
+
+.alert-msg > .strip .svg__wrapper {
+  display: block;
+  position: absolute;
+}
+
+.alert-msg > .strip .svg__wrapper svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+@media (min-width: 36em) {
+  .alert-msg > .strip .svg__wrapper svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.alert--danger {
+  --bg-colour: var(--colour-alert-error-highlight);
+  background: var(--colour-alert-error-highlight) ;
+}
+
+.alert--danger > .strip {
+  background: var(--colour-alert-error) ;
+}
+
+.alert--danger > .svg__wrapper svg {
+  stroke: var(--colour-danger) ;
+}
+
+.alert--danger > .svg__wrapper--fill svg {
+  stroke: none;
+  fill: var(--colour-danger) ;
+}
+
+.alert--warning {
+  --bg-colour: var(--colour-alert-warning);
+  background: var(--colour-alert-warning) ;
+}
+
+.alert--warning > .strip {
+  background: var(--colour-alert-warning-highlight) ;
+}
+
+.alert--warning > .svg__wrapper svg {
+  stroke: var(--colour-warning) ;
+}
+
+.alert--warning > .svg__wrapper--fill svg {
+  stroke: none;
+  fill: var(--colour-warning) ;
+}
+
+.alert--success {
+  --bg-colour: var(--colour-alert-success);
+  background: var(--colour-alert-success) ;
+}
+
+.alert--success > .strip {
+  background: var(--colour-alert-success-highlight) ;
+}
+
+.alert--success > .svg__wrapper svg {
+  stroke: var(--colour-success) ;
+}
+
+.alert--success > .svg__wrapper--fill svg {
+  stroke: none;
+  fill: var(--colour-success) ;
+}
+
+.alert--slim {
+  padding: 0.75rem 1rem 0.75rem 4rem;
+  min-height: 3rem;
+}
+
+@media (min-width: 36em) {
+  .alert--slim {
+    padding: 1.125rem 1.5rem 1.125rem 5.5rem;
+    min-height: 4rem;
+  }
+}
+
+.alert--slim p {
+  font-weight: bold;
+  font-variation-settings: 'wght' 500;
+}
+
+.alert--slim > :last-child:not(.btn) {
+  padding-bottom: 0;
+}
+
+.alert--slim > .strip {
+  padding: 0.75rem;
+}
+
+@media (min-width: 36em) {
+  .alert--slim > .strip {
+    width: 4rem;
+    padding: 1rem;
+  }
+}
+
+/*# sourceMappingURL=maps/alert.css.map */

@@ -1,0 +1,140 @@
+.pagination {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 1rem 0 3rem 0;
+}
+
+.pagination:before, .pagination:after {
+  display: none;
+}
+
+@media (min-width: 36em) {
+  .pagination {
+    flex-flow: row nowrap;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
+}
+
+@media (min-width: 62em) {
+  .pagination {
+    padding-top: 2.5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+@media (min-width: 62em) and (min-width: 62em) {
+  .pagination {
+    padding: 2.5rem 7.5rem 5rem 7.5rem;
+  }
+}
+
+.pagination.container[class*="bg-"] {
+  background: none !important;
+  --bg-pagination-next: var(--bg-colour);
+  --bg-pagination-prev: var(--bg-colour-tint);
+  --colour-pagination: initial;
+}
+
+.pagination > a {
+  color: var(--colour-pagination);
+  flex: 0 0 100%;
+  padding: 2rem 2rem 2rem 2rem;
+}
+
+@media (min-width: 36em) {
+  .pagination > a {
+    flex: 1 0 50%;
+  }
+}
+
+.pagination > a .body {
+  display: block;
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+  text-decoration: none;
+}
+
+.pagination > a .h4 {
+  padding-bottom: 1rem;
+  color: inherit;
+}
+
+.pagination > a:hover, .pagination > a:focus, .pagination > a:active {
+  color: var(--colour-pagination);
+  text-decoration: none;
+}
+
+.pagination > a:hover .body, .pagination > a:focus .body, .pagination > a:active .body {
+  text-decoration: none;
+}
+
+.pagination > a:hover .h4, .pagination > a:focus .h4, .pagination > a:active .h4 {
+  text-decoration: underline;
+}
+
+@media (min-width: 36em) {
+  .pagination > a {
+    padding: 2rem 1.5rem;
+  }
+  .pagination > a:last-child {
+    padding-left: 3rem;
+  }
+  .pagination > a:first-child {
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 62em) {
+  .pagination > a {
+    padding: 2rem;
+  }
+  .pagination > a:last-child {
+    padding-left: 2rem;
+  }
+  .pagination > a:first-child {
+    padding-right: 2rem;
+  }
+}
+
+.pagination__next {
+  background: var(--bg-pagination-next);
+}
+
+@media (min-width: 36em) {
+  .pagination__next {
+    order: 2;
+  }
+}
+
+.pagination__previous {
+  background: var(--bg-pagination-prev);
+}
+
+.container .pagination.container {
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  width: auto;
+}
+
+@media (min-width: 36em) {
+  .container .pagination.container {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    margin-left: -3rem;
+    margin-right: -3rem;
+  }
+}
+
+@media (min-width: 62em) {
+  .container .pagination.container {
+    padding-top: 2.5rem;
+    padding-bottom: 5rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/*# sourceMappingURL=maps/pagination.css.map */

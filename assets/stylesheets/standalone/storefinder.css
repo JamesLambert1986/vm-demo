@@ -1,0 +1,77 @@
+/* NOTE: This file is for a prototype and will not be the most update file */
+/* SEARCH **************************************************************************************** */
+.branch-listing li {
+  padding-left: 48px;
+  padding-left: 3rem;
+  position: relative;
+}
+
+.branch-listing li > img:first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  width: 2rem;
+  height: auto;
+  margin-top: -4px;
+  margin-top: -0.25rem;
+}
+
+/* Map **************************************************************************************** */
+.map__wrapper {
+  position: relative;
+  width: auto;
+  height: 320px;
+  height: 20rem;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+@media (min-width: 36em) {
+  .map__wrapper {
+    height: 480px;
+    height: 30em;
+  }
+}
+
+@media (min-width: 62em) {
+  /* Unset overflow on body to allow for the sticky position of the map to work */
+  body {
+    overflow: unset;
+  }
+  .map__wrapper {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+}
+
+/* Sanitise the google map */
+#map a:not([href]),
+#map a[href="#"],
+#map a[href=""],
+#map a[href*="javascript:void(0)"],
+#map button:empty,
+#map a:empty,
+#map img:not([alt]),
+#map input:not([id]),
+#map select:not([id]),
+#map textarea:not([id]),
+#map label:not([for]) {
+  outline: none !important;
+  border: none !important;
+}
+
+/*# sourceMappingURL=maps/storefinder.css.map */

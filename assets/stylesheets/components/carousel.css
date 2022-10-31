@@ -1,0 +1,204 @@
+.article-deck.carousel {
+  display: flex;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  padding-bottom: 0;
+  padding-right: 1.5rem;
+}
+
+.article-deck.carousel .card {
+  margin: 0 0.5rem 2rem 0.5rem;
+  flex-shrink: 0;
+  flex-grow: 0;
+  min-width: 18.4375rem;
+  flex-basis: 18.4375rem;
+  scroll-snap-align: start;
+}
+
+@media (min-width: 36em) {
+  .article-deck.carousel .card {
+    scroll-snap-align: unset;
+    min-width: 20rem;
+    flex-basis: 20rem;
+  }
+  .article-deck.carousel .card:last-child:nth-child(odd) {
+    margin-right: -0.5rem;
+  }
+  .article-deck.carousel .card:nth-child(odd) {
+    scroll-snap-align: start;
+  }
+}
+
+@media (min-width: 62em) {
+  .article-deck.carousel {
+    padding-right: 2rem;
+  }
+  .article-deck.carousel .card {
+    scroll-snap-align: unset;
+    min-width: 23.3rem;
+    flex: 0 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    box-sizing: border-box;
+  }
+  .article-deck.carousel .card:last-child:nth-child(odd) {
+    margin-right: 1rem;
+  }
+  .article-deck.carousel .card:last-child:not(:nth-child(3n)) {
+    margin-right: -1rem;
+  }
+  .article-deck.carousel .card:nth-child(odd) {
+    scroll-snap-align: unset;
+  }
+  .article-deck.carousel .card:nth-child(3n + 1) {
+    scroll-snap-align: start;
+  }
+}
+
+@media (min-width: 90em) {
+  .article-deck.carousel .card {
+    min-width: 23.66667rem;
+  }
+}
+
+.carousel__wrapper {
+  padding-left: 2.5rem;
+  padding-right: 2rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 2rem;
+}
+
+@media (min-width: 36em) {
+  .carousel__wrapper {
+    padding-left: 3.5rem;
+    padding-right: 3rem;
+    margin-left: -3rem;
+    margin-right: -3rem;
+    scroll-padding: 3rem;
+    min-height: 2px;
+  }
+}
+
+@media (min-width: 62em) {
+  .carousel__wrapper {
+    padding-left: 7.5rem;
+    padding-right: 7.5rem;
+    margin-left: -7.5rem;
+    margin-right: -7.5rem;
+    scroll-padding: 7.5rem;
+    min-height: 3px;
+  }
+}
+
+.carousel__controls {
+  margin-left: -2rem;
+  margin-right: -2rem;
+  overflow: hidden;
+}
+
+@media (min-width: 36em) {
+  .carousel__controls {
+    margin-left: -3rem;
+    margin-right: -3rem;
+  }
+}
+
+.carousel__controls .control-left,
+.carousel__controls .control-right {
+  margin-bottom: 0;
+}
+
+.carousel__controls .control-right {
+  float: right;
+}
+
+@media (min-width: 62em) {
+  .carousel__controls {
+    position: static;
+  }
+  .carousel__controls .control-left,
+  .carousel__controls .control-right {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 99;
+    margin-top: -2.0625rem;
+  }
+  .carousel__controls .control-right {
+    left: auto;
+    right: 0;
+  }
+}
+
+body.js-enabled .carousel__controls .pips {
+  position: absolute;
+  width: 50%;
+  left: 25%;
+  z-index: 2;
+}
+
+body.js-enabled .carousel__controls .pips .pip:nth-child(6) ~ .pip {
+  display: none;
+}
+
+@media (min-width: 36em) {
+  body.js-enabled .carousel__controls .pips .pip:nth-child(6) ~ .pip:not(:nth-child(even)) {
+    display: inline-block;
+  }
+  body.js-enabled .carousel__controls .pips .pip:nth-child(even) {
+    display: none;
+  }
+}
+
+@media (min-width: 62em) {
+  body.js-enabled .carousel__controls .pips {
+    padding-top: 0;
+  }
+  body.js-enabled .carousel__controls .pips .pip:nth-child(6) ~ .pip:nth-child(3n+1),
+  body.js-enabled .carousel__controls .pips .pip:nth-child(even) {
+    display: inline-block;
+  }
+  body.js-enabled .carousel__controls .pips .pip:nth-child(6) ~ .pip:not(:nth-child(3n+1)),
+  body.js-enabled .carousel__controls .pips .pip:not(:nth-child(3n+1)) {
+    display: none;
+  }
+}
+
+@media (min-width: 62em) {
+  .carousel__container {
+    position: relative;
+    color: var(--bg-colour, #ffffff) !important;
+    margin-left: -7.5rem;
+    padding-left: 7.5rem;
+    margin-right: -7.5rem;
+    padding-right: 7.5rem;
+  }
+  .carousel__mask {
+    position: relative;
+    color: var(--bg-colour, #ffffff) !important;
+    margin-left: -1.25rem;
+    padding-left: 1.25rem;
+    margin-right: -1.25rem;
+    padding-right: 1.25rem;
+    overflow: hidden;
+  }
+  body.js-enabled .carousel__container {
+    margin-bottom: 3rem;
+  }
+}
+
+body.js-enabled .carousel__wrapper {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body.js-enabled .carousel__wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/*# sourceMappingURL=maps/carousel.css.map */

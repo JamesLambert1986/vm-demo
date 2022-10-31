@@ -1,0 +1,84 @@
+.mvm-new {
+  position: absolute;
+  top: 50%;
+  margin-top: -0.75rem;
+  left: auto;
+  right: 1rem;
+  font-size: 0.5rem;
+  background: #BD1D65;
+  background: var(--colour-dark);
+  line-height: 1;
+  height: 1.5rem;
+  width: 1.5rem;
+  display: block;
+  color: white;
+  text-transform: uppercase;
+  line-height: 1.5rem;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-sizing: content-box;
+  font-weight: bold;
+  font-family: arial;
+  text-align: center;
+}
+
+@media (min-width: 36em) {
+  .mvm-new {
+    top: 0;
+    left: 50%;
+    right: auto;
+    margin: 0;
+    margin-left: 1rem;
+  }
+}
+
+.card-deck.mvm-featured {
+  margin-left: -0.46875rem;
+  margin-right: -0.46875rem;
+}
+
+.card-deck.mvm-featured .card:first-child:last-child {
+  min-width: calc(100% - 1rem);
+  max-width: calc(100% - 1rem);
+  background: #BD1D65;
+  background: var(--colour-dark);
+  box-shadow: none;
+}
+
+.card-deck.mvm-featured .card:first-child:last-child * {
+  color: #fff !important;
+  color: var(--colour-white) !important;
+}
+
+.card-deck.mvm-featured .card:first-child:last-child .card-title {
+  background-color: #BD1D65 !important;
+  background-color: var(--colour-dark) !important;
+}
+
+.card-deck.mvm-featured .card:first-child:last-child .card-icon .svg__wrapper:not(.svg__wrapper--fill) svg {
+  stroke: #ffffff;
+  stroke: var(--colour-white);
+}
+
+.card-deck--fluid-top .card:nth-child(2) {
+  background: #BD1D65;
+  background: var(--colour-dark);
+  box-shadow: none;
+}
+
+.card-deck--fluid-top .card:nth-child(2) * {
+  color: #fff !important;
+  color: var(--colour-white) !important;
+}
+
+.card-deck--fluid-top .card:nth-child(2) .card-title {
+  background-color: #BD1D65 !important;
+  background-color: var(--colour-dark) !important;
+}
+
+.card-deck--fluid-top .card:nth-child(2) .card-icon .svg__wrapper:not(.svg__wrapper--fill) svg {
+  stroke: #ffffff;
+  stroke: var(--colour-white);
+}
+
+/*# sourceMappingURL=maps/mvm.css.map */

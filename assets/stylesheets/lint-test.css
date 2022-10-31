@@ -1,0 +1,53 @@
+/* Not added to VMstrap tet */
+html:not([lang]):after,
+html[lang=""]:after {
+  content: "No language tag";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: red !important;
+}
+
+meta[charset]:not([charset="UTF-8"]):after {
+  content: "Incorrect character set defined";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: red !important;
+}
+
+meta[name="viewport"][content*="user-scalable=no"]:after,
+meta[name="viewport"][content*="maximum-scale"]:after,
+meta[name="viewport"][content*="minimum-scale"]:after {
+  content: "Unaccessible viewport attributes";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: red !important;
+}
+
+a:not([href]),
+a[href="#"],
+a[href=""],
+a[href*="javascript:void(0)"],
+button:empty,
+a:empty {
+  content: "lint";
+  outline: 2px solid red !important;
+}
+
+img:not([alt]) {
+  outline: 2px solid red !important;
+}
+
+input:not([id]),
+select:not([id]),
+textarea:not([id]) {
+  border: 2px solid red !important;
+}
+
+label:not([for]) {
+  border: 2px solid red !important;
+}
+
+/*# sourceMappingURL=maps/lint.css.map */

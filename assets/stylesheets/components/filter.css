@@ -1,0 +1,62 @@
+.filter {
+  border-bottom: 1px solid currentColor;
+  border-color: var(--colour-border) ;
+  padding: 1.5rem 1rem 0rem 1rem;
+}
+
+.filter > .row {
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.filter > .row > .svg__wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.filter .filter__title .h6 {
+  padding-bottom: 1rem;
+}
+
+.filter .filter__btn .btn {
+  margin-bottom: calc(1.5rem - 1px);
+}
+
+@media (min-width: 36em) {
+  .filter {
+    padding: 1.75rem 3rem 0.25rem 3rem;
+  }
+}
+
+@media (min-width: 62em) {
+  .filter {
+    padding-left: 7.5rem;
+    padding-right: 7.5rem;
+  }
+  .filter .filter__btn {
+    text-align: right;
+  }
+}
+
+@media (min-width: 62em) {
+  .filter .form-group {
+    display: flex;
+    flex-flow: row wrap;
+    margin-right: -0.5rem;
+    margin-left: -0.5rem;
+  }
+  .filter .form-group .custom-control {
+    flex: 0 0 50%;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media (min-width: 62em) {
+  .filter .form-group .custom-control {
+    flex: 0 0 33.3333%;
+  }
+}
+
+/*# sourceMappingURL=maps/filter.css.map */

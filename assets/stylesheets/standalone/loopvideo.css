@@ -1,0 +1,147 @@
+/* Make sure the container has a hidden overflow to hide the controls */
+.loop__wrapper {
+  overflow: hidden;
+  min-height: 20rem !important;
+}
+
+@media (min-width: 36em) {
+  .loop__wrapper {
+    min-height: 27rem !important;
+  }
+}
+
+@media (min-width: 62em) {
+  .loop__wrapper {
+    min-height: 27rem !important;
+  }
+}
+
+@keyframes fade-in-loop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.youtube-embed--loop,
+.youtube-embed__thumbnail {
+  max-width: none;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  height: 102%;
+  width: 102%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  margin: 0;
+  overflow: hidden;
+}
+
+.youtube-embed__thumbnail {
+  object-fit: none;
+  opacity: 1 !important;
+  animation: none !important;
+}
+
+.youtube-embed--loop .youtube-embed__inner {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  width: 100% !important;
+  height: 200% !important;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.loop__wrapper.loop--loaded .youtube-embed--loop .youtube-embed__inner {
+  opacity: 1;
+}
+
+@media (min-width: 62em) {
+  .youtube-embed--loop .youtube-embed__inner {
+    width: var(--video-width, 100%) !important;
+  }
+}
+
+.youtube-embed--loop ~ h2 {
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.25);
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.btn[class*="bg-"]:hover {
+  background: white !important;
+  color: var(--colour-primary-tint) !important;
+}
+
+.youtube-embed--loop ~ .pattern__inner svg {
+  opacity: 0.25 !important;
+}
+
+.pattern--md .pattern__inner {
+  display: none !important;
+}
+
+@media (min-width: 62em) {
+  .pattern--md .pattern__inner {
+    display: block !important;
+  }
+}
+
+/* Button */
+.loop__pause-btn {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  height: 3rem;
+  width: 3rem;
+  text-indent: 200%;
+  overflow: hidden;
+  background: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 24 24'%3e%3cpath d='M5.52144295,20.9048976 C9.8229118,24.0336903 15.8801877,23.658116 19.7601291,19.7781746 C24.0558963,15.4824074 24.0558963,8.51759262 19.7601291,4.22182541 C15.4643619,-0.0739418023 8.49954712,-0.0739418023 4.20377991,4.22182541 C-0.17535898,8.6009643 0.42675818,14.6405219 3.07212129,18.4231513 M14.5296895,7.01977249 L14.5296895,17.0197725 M9.52968952,7.01977249 L9.52968952,17.0197725' stroke='%23FFFFFF' stroke-width='1.5px' stroke-linejoin='round' fill='transparent' /%3e%3c/svg%3e");
+  background-size: 2rem 2rem;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  display: block;
+  border: none;
+}
+
+.loop--paused .loop__pause-btn {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 24 24'%3e%3cpath d='M5.52144295,20.9048976 C9.8229118,24.0336903 15.8801877,23.658116 19.7601291,19.7781746 C24.0558963,15.4824074 24.0558963,8.51759262 19.7601291,4.22182541 C15.4643619,-0.0739418023 8.49954712,-0.0739418023 4.20377991,4.22182541 C-0.17535898,8.6009643 0.42675818,14.6405219 3.07212129,18.4231513 M9.02968952,8.01977249 L16.0296895,12.0197725 L9.02968952,16.0197725 L9.02968952,8.01977249 Z' stroke='%23FFFFFF' stroke-width='1.5px' stroke-linejoin='round' fill='transparent' /%3e%3c/svg%3e");
+}
+
+@supports (mask-size: 100% 100%) or (-webkit-mask-size: 100% 100%) {
+  .loop__pause-btn {
+    --icon-pause: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 24 24'%3e%3cpath d='M5.52144295,20.9048976 C9.8229118,24.0336903 15.8801877,23.658116 19.7601291,19.7781746 C24.0558963,15.4824074 24.0558963,8.51759262 19.7601291,4.22182541 C15.4643619,-0.0739418023 8.49954712,-0.0739418023 4.20377991,4.22182541 C-0.17535898,8.6009643 0.42675818,14.6405219 3.07212129,18.4231513 M14.5296895,7.01977249 L14.5296895,17.0197725 M9.52968952,7.01977249 L9.52968952,17.0197725' stroke='%23000000' stroke-width='1.5px' stroke-linejoin='round' fill='transparent' /%3e%3c/svg%3e");
+    --icon-play: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 24 24'%3e%3cpath d='M5.52144295,20.9048976 C9.8229118,24.0336903 15.8801877,23.658116 19.7601291,19.7781746 C24.0558963,15.4824074 24.0558963,8.51759262 19.7601291,4.22182541 C15.4643619,-0.0739418023 8.49954712,-0.0739418023 4.20377991,4.22182541 C-0.17535898,8.6009643 0.42675818,14.6405219 3.07212129,18.4231513 M9.02968952,8.01977249 L16.0296895,12.0197725 L9.02968952,16.0197725 L9.02968952,8.01977249 Z' stroke='%23000000' stroke-width='1.5px' stroke-linejoin='round' fill='transparent' /%3e%3c/svg%3e");
+    color: var(--colour-link);
+    background: currentColor;
+    mask-image: var(--icon-pause);
+    mask-size: 2rem 2rem;
+    mask-repeat: no-repeat;
+    mask-position: 50% 50%;
+    -webkit-mask-image: var(--icon-pause);
+    -webkit-mask-size: 2rem 2rem;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: 50% 50%;
+  }
+  .loop__pause-btn:hover,
+  .loop__pause-btn:focus {
+    color: var(--colour-hover);
+  }
+  .loop__pause-btn:active {
+    color: var(--colour-active);
+  }
+  .loop__wrapper:not(.loop--playing) .loop__pause-btn {
+    background: currentColor;
+    mask-image: var(--icon-play);
+    -webkit-mask-image: var(--icon-play);
+  }
+}
+
+/*# sourceMappingURL=maps/loopvideo.css.map */

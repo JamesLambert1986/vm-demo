@@ -1,0 +1,43 @@
+.results-list .list--featured {
+  padding-top: 0;
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 62em) {
+  .results-list .list--featured {
+    padding-bottom: 3rem;
+  }
+}
+
+.results-list .list--featured li {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.results-list a {
+  display: block;
+  text-decoration: none;
+  position: relative;
+  padding: 1.5rem 0;
+}
+
+.results-list a:after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 0.75rem);
+  left: auto;
+  right: 0.5rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  mask-image: var(--icon-chevron-right);
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  mask-position: 0 0;
+  -webkit-mask-image: var(--icon-chevron-right);
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0 0;
+  background-color: var(--colour-primary);
+}
+
+/*# sourceMappingURL=maps/results-list.css.map */
